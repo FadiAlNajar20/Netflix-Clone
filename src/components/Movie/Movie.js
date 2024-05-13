@@ -1,6 +1,5 @@
 import Cards from "../Cards/Cards";
 import "./Movie.css"
-import ModalMovie from "../ModalMovie/ModalMovie";
 
 function Movie(props) {
     
@@ -14,6 +13,7 @@ function Movie(props) {
                 release_date={props.movie.release_date}
                 poster_path={props.movie.poster_path}
                 sendMovieToServer={props.sendMovieToServer}
+                location="home"
             />
         </section>
     );
