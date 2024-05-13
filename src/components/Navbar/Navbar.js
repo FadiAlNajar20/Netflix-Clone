@@ -19,7 +19,7 @@ function Navbar() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/" className="link">
+                            <Link to="/favorite" className="link">
                                 Favorite
                             </Link>
                         </li>

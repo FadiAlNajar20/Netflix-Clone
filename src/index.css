@@ -1,7 +1,11 @@
 :root {
-  --nav-bg:#404040;
-  --text-100:#94a3b8;
-  --accent-100:#ff6366;
+  --nav-bg: #404040;
+  --text-100: #94a3b8;
+  --accent-100: #ff6366;
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -11,7 +15,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: inherit;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -19,9 +25,8 @@ code {
 }
 
 #root {
+  height: inherit;
   display: flex;
   flex-direction: column;
-
+  justify-content: space-between;
 }
-
-
