@@ -4,11 +4,11 @@ import axios from "axios";
 import "./MovieList.css"
 
 function MovieList() {
+    const getUrl = `https://movies-library-9dmu.onrender.com/trending`;
     const [movie, setMovie] = useState([]);
     console.log(movie);
-    
+
     function getMovie() {
-        const getUrl = `${process.env.REACT_APP_URL_Server}/trending`;
         axios.get(getUrl)
             .then((response) => {
                 setMovie(response.data);
@@ -19,14 +19,14 @@ function MovieList() {
     }
 
     const sendMovieToServer = (movie) =>{
-        const postUrl = `${process.env.REACT_APP_URL_Server}/addMovie`;
+        const postUrl = "https://movies-library-9dmu.onrender.com/addMovie";
 
         let filterData = {
-            title: movie.title,
-            release_date: movie.release_date,
-            poster_path: movie.poster_path,
-            overview: movie.overview,
-            comment: movie.comment
+            title: movie.title || "There is no Title",
+            release_date: movie.release_date || "There is no Release Date",
+            poster_path: movie.poster_path || "There is no Poster Path",
+            overview: movie.overview || "There is no Overview",
+            comment: movie.comment || "There is no Comment"
         }
 
         axios.post(postUrl, filterData)
